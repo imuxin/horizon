@@ -32,23 +32,25 @@
       </div>
       <div id='main_content'>
         {% include "horizon/_messages.html" %}
-        {% block sidebar %}
-          {% include 'horizon/common/_sidebar.html' %}
-        {% endblock %}
-        <div id='content_body'>
-          <div class='container-fluid'>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="page-breadcrumb">
-                  {% block breadcrumb_nav %}
-                    {% breadcrumb_nav %}
-                  {% endblock %}
-                </div>
+        <div id='main_content_without_message'>
+          {% block sidebar %}
+            {% include 'horizon/common/_sidebar.html' %}
+          {% endblock %}
+          <div id='content_body'>
+            <div class='container-fluid'>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="page-breadcrumb">
+                    {% block breadcrumb_nav %}
+                      {% breadcrumb_nav %}
+                    {% endblock %}
+                  </div>
 
-                {% block page_header %}
-                  {% include "horizon/common/_page_header.html" with title=page_title %}
-                {% endblock %}
-                {% block main %}{% endblock %}
+                  {% block page_header %}
+                    {% include "horizon/common/_page_header.html" with title=page_title %}
+                  {% endblock %}
+                  {% block main %}{% endblock %}
+                </div>
               </div>
             </div>
           </div>

@@ -1,0 +1,12 @@
+#main_content_without_message {
+    display: flex;
+    flex-direction: row-reverse;
+}
+@media(min-width: $screen-sm-min) {
+    #content_body {
+      padding-left: 0;
+    }
+}
+#content_body {
+    flex-grow: 1;
+}

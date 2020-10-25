@@ -12,7 +12,7 @@
              class="collapsed"
            {% endif %}>
           {{ dashboard.name }}
-          <span class="openstack-toggle pull-right fa"></span>
+          <span class="openstack-toggle pull-left fa"></span>
         </a>
         <ul id="sidebar-accordion-{{ dashboard.slug }}"
             class="nav collapse panel-collapse{% if current.slug == dashboard.slug %} in{% endif %}">
@@ -28,11 +28,11 @@
                        {% if current.slug == dashboard.slug and current_panel_group != group.slug %}class="collapsed"
                        {% elif current.slug != dashboard.slug and forloop.counter0 != 0 %}class="collapsed"{% endif %}>
                       {{ group.name }}
-                      <span class="openstack-toggle fa pull-right"></span>
+                      <span class="openstack-toggle fa pull-left"></span>
                     </a>
                 {% endif %}
                     <div id="sidebar-accordion-{{ dashboard.slug }}-{{ group.slug }}"
-                      class="list-group collapse 
+                      class="list-group collapse
                         {% if current.slug == dashboard.slug and current_panel_group == group.slug or group.slug == 'default' %} in
                         {% elif current.slug != dashboard.slug and forloop.counter0 == 0 %} in{% endif %}">
                 {% for panel in filtered_panels %}

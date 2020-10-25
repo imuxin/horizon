@@ -6,7 +6,7 @@
  * list group styling.
  */
 
-#sidebar-accordion {
+ #sidebar-accordion {
   width: $sidebar-width;
 }
 
@@ -64,7 +64,7 @@
 
   // Rotate the arrow toggle for closed panels
   .collapsed > .openstack-toggle.fa {
-    @include rotate(-90deg);
+    @include rotate(+90deg);
   }
 
   // Remove panel default styling for the side nav only
@@ -98,6 +98,10 @@
     outline: 0;
   }
 
+  .openstack-dashboard {
+    text-align: right;
+  }
+
   // Center align panel groups
   .openstack-panel-group {
     text-align: center;
@@ -105,6 +109,6 @@
 
   // Right align panels
   .openstack-panel {
-    text-align: right;
+    text-align: left;
   }
 }
